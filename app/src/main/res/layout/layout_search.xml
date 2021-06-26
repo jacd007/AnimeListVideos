@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageButton
+        android:id="@+id/ibtn_search_show_hide"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_search_black_24dp"
+        android:tint="#B7F1B0"
+        android:background="@color/transparent"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageButton
+        android:id="@+id/ibtn_search_cancel"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_cancel"
+        android:tint="#E88A8A"
+        android:background="@color/transparent"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/et_search_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#FFF"
+        android:textColorHint="#C9E7FF"
+        android:hint="¿Qué Buscas?"
+        android:gravity="center"
+        android:inputType="text"
+        android:singleLine="true"
+        android:layout_toEndOf="@id/ibtn_search_cancel"
+        android:layout_toStartOf="@id/ibtn_search_show_hide"/>
+
+
+
+</RelativeLayout>

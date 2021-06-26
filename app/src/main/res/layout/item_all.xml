@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="6dp"
+    app:cardElevation="7dp"
+    app:cardMaxElevation="8dp"
+    app:cardCornerRadius="7dp"
+    android:layout_margin="2dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_text_1">
+            <TextView
+                android:id="@+id/item_all_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/border_text_1"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="3dp"
+                android:paddingTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical|end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp">
+            <CheckBox
+                android:id="@+id/item_all_cb_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:checked="false"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".9"
+                android:elevation="6dp"
+                app:cardElevation="7dp"
+                app:cardMaxElevation="8dp"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="7dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent">
+
+
+                    <ImageView
+                        android:id="@+id/item_today_iv_image"
+                        android:layout_width="230dp"
+                        android:layout_height="350dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo"/>
+
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_today_tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="31/12/2021 12:00 pm"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_history_tv_status"
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Estado"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_text_1"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="3dp"/>
+
+                    <TextView
+                        android:id="@+id/item_today_tv_capitule"
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_text_3"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="3dp"/>
+
+                    <TextView
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cap: 0000"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_text_1"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="3dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_today_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textStyle="bold"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</LinearLayout>

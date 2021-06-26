@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.ResumeActivity"
+    tools:showIn="@layout/activity_resume">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_weight=".1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:tint="@color/white"
+                android:src="@drawable/ic_video_label_24"
+                tools:ignore="NestedWeights" />
+
+
+            <EditText
+                android:id="@+id/et_resume_video_name"
+                android:layout_weight=".8"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:background="@drawable/border_2"
+                android:hint="Nombre del Video"/>
+
+            <ImageButton
+                android:layout_weight=".1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:tint="@color/white"
+                android:src="@drawable/ic_file_copy_24"
+                android:onClick="copyClipboard"
+                tools:ignore="NestedWeights" />
+
+
+        </LinearLayout>
+
+        <!-- CAPITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="CAPITULO:"/>
+
+            <LinearLayout
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                >
+                <ImageButton
+                    android:layout_weight=".25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_navigate_before_24"
+                    android:onClick="capituleSubstract"
+                    tools:ignore="NestedWeights" />
+
+                <EditText
+                    android:layout_weight=".5"
+                    android:id="@+id/et_resume_video_capitule"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAAAAA"
+                    android:background="@drawable/border_2"
+                    android:hint="Cap/Temp"/>
+
+                <ImageButton
+                    android:layout_weight=".25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_navigate_next_24"
+                    android:onClick="capituleAdded"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ESTADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="ESTADO:"/>
+
+            <Spinner
+                android:id="@+id/resume_spn_xx1"
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- DIA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="SEMANALMENTE:"/>
+
+            <Spinner
+                android:id="@+id/resume_spn_xx2"
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- TIPO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="TIPO:"/>
+
+            <Spinner
+                android:id="@+id/resume_spn_xx3"
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- COLOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="COLOR:"/>
+
+            <Spinner
+                android:id="@+id/resume_spn_xx4"
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- TEMPORADA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="CAPITULO:"/>
+
+            <LinearLayout
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                >
+                <ImageButton
+                    android:layout_weight=".25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_navigate_before_24"
+                    android:onClick="seasonSubstract"
+                    tools:ignore="NestedWeights" />
+
+                <EditText
+                    android:layout_weight=".5"
+                    android:id="@+id/et_resume_video_season"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAAAAA"
+                    android:background="@drawable/border_2"
+                    android:hint="Cap/Temp"/>
+
+                <ImageButton
+                    android:layout_weight=".25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_navigate_next_24"
+                    android:onClick="seasonAdded"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- FECHA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="FECHA:"/>
+
+            <TextView
+                android:id="@+id/tv_resume_video_date"
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="Junio 09, 2020 00:00"/>
+        </LinearLayout>
+
+        <!-- VISTO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="FECHA:"/>
+
+            <Switch
+                android:id="@+id/sw_resume_video_done"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="Visto"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+
+
+        <!-- FIN -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <Button
+            android:id="@+id/btn_resume_save"
+            android:layout_margin="25dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/border_button_circular3"
+            android:text="GUARDAR"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/large_text" />
+    -->
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="4dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="6dp">
+
+        <RelativeLayout
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:text="TITLE"/>
+
+            <LinearLayout
+                android:layout_below="@id/tv_dialog_title"
+                android:background="#F6F6F6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.jama.carouselview.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:carouselOffset="center"
+                    app:enableSnapping="true"
+                    app:indicatorAnimationType="scale"
+                    app:indicatorPadding="3"
+                    app:indicatorRadius="3"
+                    app:indicatorSelectedColor="@color/colorSelect"
+                    app:indicatorUnselectedColor="@color/colorUnselect"
+                    app:resource="@layout/item_dialog"
+                    app:scaleOnScroll="false"
+                    app:setAutoPlay="true"
+                    app:setAutoPlayDelay="20000"
+                    app:size="1"
+                    app:spacing="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_dialog_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/color_done"
+                    android:background="@color/transparent"
+                    android:text="Acceptar"/>
+
+                <Button
+                    android:id="@+id/btn_dialog_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight=".5"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/error_toast"
+                    android:background="@color/transparent"
+                    android:text="Cancelar"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

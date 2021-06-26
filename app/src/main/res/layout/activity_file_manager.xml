@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".ui.activity.FileManagerActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_getdb"
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/border_button_circular"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Traer Db"/>
+
+        <View
+            android:layout_weight=".1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+        <Switch
+            android:id="@+id/sw_enable_edittext"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Show/Hide index"
+            android:textColor="@color/white"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_2"
+        android:textColor="@color/white"
+        android:enabled="false"
+        android:focusable="false"
+        android:id="@+id/etFile"
+        />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btSave"
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/border_button_circular"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btRead"
+            android:text="btRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/border_button_circular3"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:background="#f2f2f2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_file_manager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="@color/transparent"/>
+
+
+
+</LinearLayout>

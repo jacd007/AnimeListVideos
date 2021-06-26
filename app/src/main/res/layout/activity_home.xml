@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+    tools:context=".ui.activity.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:layout_toStartOf="@id/ibtn_search_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:src="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_home_state_internet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:text="@string/app_name"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                layout="@layout/layout_search"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ibtn_search_show"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:tint="#B7F1B0"
+            android:background="@color/transparent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    >
+                    <Spinner
+                        android:layout_weight=".48"
+                        android:id="@+id/spn_simulate_day"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:spinnerMode="dropdown"/>
+
+                    <View
+                        android:layout_weight=".04"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <Spinner
+                        android:layout_weight=".48"
+                        android:id="@+id/spn_simulate_status"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:spinnerMode="dropdown"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#151515">
+                    <com.jama.carouselview.CarouselView
+                        android:id="@+id/carouselView_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:carouselOffset="center"
+                        app:enableSnapping="true"
+                        app:indicatorAnimationType="scale"
+                        app:indicatorPadding="3"
+                        app:indicatorRadius="3"
+                        app:indicatorSelectedColor="@color/colorSelect"
+                        app:indicatorUnselectedColor="@color/colorUnselect"
+                        app:resource="@layout/item_news"
+                        app:scaleOnScroll="false"
+                        app:setAutoPlay="true"
+                        app:setAutoPlayDelay="20000"
+                        app:size="1"
+                        app:spacing="10" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/ibtn_search_add_video"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_playlist_add_24"
+            android:tint="#B7F1B0"
+            android:background="@color/transparent" />
+
+        <View
+            android:background="#FFFFFF"
+            android:layout_margin="3dp"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/ibtn_list_all"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_list_24"
+            android:tint="#B7F1B0"
+            android:background="@color/transparent" />
+
+        <View
+            android:background="#FFFFFF"
+            android:layout_margin="3dp"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_home_count"
+            android:layout_weight=".25"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:text="0"/>
+
+        <View
+            android:background="#FFFFFF"
+            android:layout_margin="3dp"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/ibtn_webview"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_web_24"
+            android:tint="#B7F1B0"
+            android:background="@color/transparent" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
